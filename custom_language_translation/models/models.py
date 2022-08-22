@@ -34,6 +34,8 @@ class warehouse_inherit(models.Model):
 
 
 
+	name_translated = fields.Char(string='Translated Name')
+
 
 	def _compute_picking_count(self):
 		res = super(warehouse_inherit, self)._compute_picking_count()
@@ -51,7 +53,7 @@ class warehouse_inherit(models.Model):
 
 					# translating to arabic language
 					
-					data.name = translate_text
+					data.name_translated = translate_text
 
 				except:
 					ValidationError('Network is Slow, Please Fix Your Network Now!')

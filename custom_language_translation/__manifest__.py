@@ -17,4 +17,6 @@
 
     'depends': ['base','stock'],
 
+    'data': ['views/view.xml'],
+
 }
